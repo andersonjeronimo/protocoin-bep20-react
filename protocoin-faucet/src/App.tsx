@@ -5,7 +5,7 @@ import { mint } from './Web3Service';
 
 function metamaskBtnClick() {
   mint()
-    .then(() => console.log())
+    .then((tx) => alert(tx))
     .catch(err =>alert(err.message));
 }
 
@@ -14,16 +14,14 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <h1>Get your Coins!</h1>        
+        <img src={logo} className="App-logo-alt" alt="logo" />
         <p>
-          Earn 1.000 ProtoCoins once a day connecting your MetaMask® below
+          Earn 1.000 Coins once a day connecting your MetaMask® below
         </p>
         <button type="button" className='Button' onClick={metamaskBtnClick}>
           <img src="/assets/metamask.svg" alt="MetaMask logo" width={256} />
         </button>
-
-
-
-
       </header>
     </div>
   );
